@@ -29,16 +29,17 @@ console.log(form1.$values.sid, form2.$values.sid);
 
 ## Vite config
 ```ts
-## Babel config 
-```json
-{
-  "presets": ["@babel/preset-typescript"],
-  "plugins": [[
-    "effector/babel-plugin",
-    {
-      "factories": ["@effective-forms/core"]
-    }
-  ]]
-}
-```
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import babel from 'vite-plugin-babel';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(),
+    babel({
+      filter: /\.tsx?$/,
+    })
+  ],
+})
 ```
