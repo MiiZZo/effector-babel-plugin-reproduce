@@ -1,0 +1,9 @@
+{
+  "presets": ["@babel/preset-typescript"],
+  "plugins": [[
+    "effector/babel-plugin",
+    {
+      "factories": ["@effective-forms/core"]
+    }
+  ]]
+}
